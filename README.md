@@ -41,13 +41,14 @@ plusOne.modifier(3) == 5
 // Create a deck
 var deck = new Deck
 
-// Add a card to the deck
+// Add a card to the deck (i.e. +2 card)
 deck.addCard(plusTwo)
 
-// Draw a card with a value
-const result = deck.draw(4)
-// => New value
-result[0] == 6
-// => Special (i.e. elements, heal, ..)
-result[1] == [null]
+// Draw a card with a value (i.e. 4)
+deck.draw(4)
+
+// Value after drawing
+deck.modifier == 6
+// Special after drawing
+deck.special == []
 ```
