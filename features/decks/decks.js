@@ -1,6 +1,6 @@
 // ================================
 // Imports
-const { Card, Bless, Curse } = require("./cards.js");
+const { Card, Bless, Curse } = require("../cards/cards.js");
 
 // ================================
 // Modifier Deck
@@ -15,13 +15,19 @@ class Deck {
         this.cards = [],
 
         // Discard Pile
-        this.discards = []
+        this.discards = [],
+
+        // Last Played
+        this.played = []
     }
 
     // Mix Deck and Discard
 
     // Shuffle
     shuffle() {
+        while (this.discards.length > 0) {
+            this.cards.push(this.discards.pop());
+        }
         var currentIndex = this.cards.length, temporaryValue, randomIndex;
         while (0 !== currentIndex) {
           randomIndex = Math.floor(Math.random() * currentIndex);
@@ -35,8 +41,13 @@ class Deck {
       
     // Draw
     draw() {
-        this.discards.push(this.cards.pop());
-        return
+        let card = this.cards.pop();
+        this.discards.push(card);
+        this.played.push(card);
+        if (card.rolling) {
+            this.draw();
+        }
+        return;
     }
 
     addCard(card) {
@@ -98,6 +109,7 @@ const deck = new Deck;
 deck.addCard(card1);
 deck.addCard(card2);
 
+
 console.log(deck.cards)
 console.log("============================")
 
@@ -105,8 +117,20 @@ deck.draw();
 console.log(deck.cards)
 console.log("============================")
 console.log(deck.discards)
-
-
+console.log("============================")
+console.log(deck.played)
+console.log("============================")
+console.log("============================")
+console.log("============================")
+deck.shuffle()
+console.log("CARDS", deck.cards)
+console.log("============================")
+console.log("DISCARD", deck.discards)
+console.log("============================")
+console.log("DECK", deck.played)
+console.log("============================")
+console.log("============================")
+console.log("============================")
 // ================================
 // Exports
 module.exports = {
