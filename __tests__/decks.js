@@ -70,13 +70,14 @@ describe('Test / Gloomhaven Modifier Decks', function() {
   it("1.5. Deck - draw", function() {
     let deck = new Deck;
     deck.addCards([bless, curse, m1, p2]);
-    let d1 = deck.draw(2);
-    expect(d1[0]).to.eql(4);
-    expect(d1[1]).to.eql([null]);
+    
+    deck.draw(2);
+    expect(deck.modifier).to.eql(4);
+    expect(deck.special).to.eql([]);
 
-    let d2 = deck.draw(3);
-    expect(d2[0]).to.eql(2);
-    expect(d2[1]).to.eql([null]);
+    deck.draw(3);
+    expect(deck.modifier).to.eql(2);
+    expect(deck.special).to.eql([]);
   });
 
   // -------------------------------
