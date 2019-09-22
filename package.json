@@ -1,26 +1,28 @@
 {
   "name": "gloomhaven-cards",
   "version": "0.0.0",
-  "description": "Package for missing Gloomhaven player and monster cards.
-",
+  "description": "Package for missing Gloomhaven player and monster cards.",
   "main": "index.js",
   "repository": "https://github.com/jfklorenz/Gloomhaven-Cards.git",
   "author": "Julian Lorenz",
-  "contributors": [
-  ],
+  "contributors": [],
   "keywords": [
     "gloomhaven",
     "gloomhaven cards",
     "gloomhaven decks",
-    "boardgame",
+    "boardgame"
   ],
   "license": "MIT",
   "private": false,
   "devDependencies": {
     "expect.js": "^0.3.1",
-    "jest": "^24.9.0",
+    "jest": "^24.9.0"
   },
   "scripts": {
     "test": "jest"
+  },
+  "dependencies": {
+    "test": "^0.6.0",
+    "yarn": "^1.17.3"
   }
 }

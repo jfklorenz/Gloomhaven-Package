@@ -1,6 +1,6 @@
 // ================================
 // Imports
-const { Card, Bless, Curse } = require("../cards/cards.js");
+const { Card, PlusTwo, PlusOne, Bless, Curse } = require("../cards/cards.js");
 
 // ================================
 // Modifier Deck
@@ -15,10 +15,7 @@ class Deck {
         this.cards = [],
 
         // Discard Pile
-        this.discards = [],
-
-        // Last Played
-        this.played = []
+        this.discards = []
     }
 
     // Mix Deck and Discard
@@ -40,14 +37,13 @@ class Deck {
       }
       
     // Draw
-    draw() {
+    draw(value, special = []) {
         let card = this.cards.pop();
+        value = card.modifier(value);
+        if (!(special === null)) special.push(card.special);
         this.discards.push(card);
-        this.played.push(card);
-        if (card.rolling) {
-            this.draw();
-        }
-        return;
+        if (card.rolling) this.draw(value, special);
+        return [value, special];
     }
 
     addCard(card) {
@@ -102,35 +98,7 @@ class PlayerCurse extends Deck {};
 
 // ================================
 // Console.log
-const card1 = new Bless;
-const card2 = new Curse;
-const deck = new Deck;
 
-deck.addCard(card1);
-deck.addCard(card2);
-
-
-console.log(deck.cards)
-console.log("============================")
-
-deck.draw();
-console.log(deck.cards)
-console.log("============================")
-console.log(deck.discards)
-console.log("============================")
-console.log(deck.played)
-console.log("============================")
-console.log("============================")
-console.log("============================")
-deck.shuffle()
-console.log("CARDS", deck.cards)
-console.log("============================")
-console.log("DISCARD", deck.discards)
-console.log("============================")
-console.log("DECK", deck.played)
-console.log("============================")
-console.log("============================")
-console.log("============================")
 // ================================
 // Exports
 module.exports = {
