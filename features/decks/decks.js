@@ -16,6 +16,12 @@ class Deck {
 
         // Discard Pile
         this.discards = []
+
+        // Value after drawing
+        this.modifier = 0,
+
+        // Modifier after drawing
+        this.special = []
     }
 
     // Mix Deck and Discard
@@ -37,13 +43,18 @@ class Deck {
       }
       
     // Draw
-    draw(value, special = []) {
+    draw(value) {
         let card = this.cards.pop();
-        value = card.modifier(value);
-        if (!(special === null)) special.push(card.special);
-        this.discards.push(card);
-        if (card.rolling) this.draw(value, special);
-        return [value, special];
+        // Add Special
+        if (!(card.special === null)) special.push(card.special);
+
+        // Rolling or not rolling
+        if (card.rolling) {
+            this.draw(card.modifier(value));
+        } else {
+            this.modifier = card.modifier(value);
+        }
+        return;
     }
 
     addCard(card) {
@@ -72,7 +83,6 @@ class Player extends Deck {
         super()
 
     }
-
 
 }
 
