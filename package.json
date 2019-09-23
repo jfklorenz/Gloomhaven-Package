@@ -1,6 +1,6 @@
 {
   "name": "gloomhaven-cards",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Package for missing Gloomhaven player and monster cards.",
   "main": "index.js",
   "repository": "https://github.com/jfklorenz/Gloomhaven-Cards.git",
