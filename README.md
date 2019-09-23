@@ -50,5 +50,5 @@ deck.draw(4)
 // Value after drawing
 deck.modifier == 6
 // Special after drawing
-deck.special == []
+deck.special = []
 ```

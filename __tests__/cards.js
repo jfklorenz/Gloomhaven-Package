@@ -16,6 +16,7 @@ describe('test/card - A single playing card', function() {
     let card = new Card;
     expect(card.name).to.eql("Modifier Card");
     expect(card.modifier).to.eql(null);
+    expect(card.cmp).to.eql(null);
     expect(card.shuffle).to.eql(false);
     expect(card.rolling).to.eql(false);
     expect(card.special).to.eql(null);
@@ -26,6 +27,7 @@ describe('test/card - A single playing card', function() {
   it("1.1. Plus 2", function() {
     let card = new PlusTwo;
     expect(card.name).to.eql("+2");
+    expect(card.cmp).to.eql(2);
     expect(card.shuffle).to.eql(false);
     expect(card.rolling).to.eql(false);
     expect(card.special).to.eql(null);
@@ -44,6 +46,7 @@ describe('test/card - A single playing card', function() {
   it("1.2. Plus 1", function() {
     let card = new PlusOne;
     expect(card.name).to.eql("+1");
+    expect(card.cmp).to.eql(1);
     expect(card.shuffle).to.eql(false);
     expect(card.rolling).to.eql(false);
     expect(card.special).to.eql(null);
@@ -62,6 +65,7 @@ describe('test/card - A single playing card', function() {
   it("1.3. Plus 0", function() {
     let card = new PlusZero;
     expect(card.name).to.eql("+0");
+    expect(card.cmp).to.eql(0);
     expect(card.shuffle).to.eql(false);
     expect(card.rolling).to.eql(false);
     expect(card.special).to.eql(null);
@@ -80,6 +84,7 @@ describe('test/card - A single playing card', function() {
   it("1.4. Minus 1", function() {
     let card = new MinusOne;
     expect(card.name).to.eql("-1");
+    expect(card.cmp).to.eql(-1);
     expect(card.shuffle).to.eql(false);
     expect(card.rolling).to.eql(false);
     expect(card.special).to.eql(null);
@@ -98,6 +103,7 @@ describe('test/card - A single playing card', function() {
   it("1.5. Minus 2", function() {
     let card = new MinusTwo;
     expect(card.name).to.eql("-2");
+    expect(card.cmp).to.eql(-2);
     expect(card.shuffle).to.eql(false);
     expect(card.rolling).to.eql(false);
     expect(card.special).to.eql(null);
@@ -116,6 +122,7 @@ describe('test/card - A single playing card', function() {
   it("1.6. Double", function() {
     let card = new Double;
     expect(card.name).to.eql("Double");
+    expect(card.cmp).to.eql(10);
     expect(card.shuffle).to.eql(true);
     expect(card.rolling).to.eql(false);
     expect(card.special).to.eql(null);
@@ -134,6 +141,7 @@ describe('test/card - A single playing card', function() {
   it("1.7. Empty", function() {
     let card = new Empty;
     expect(card.name).to.eql("Empty");
+    expect(card.cmp).to.eql(-10);
     expect(card.shuffle).to.eql(true);
     expect(card.rolling).to.eql(false);
     expect(card.special).to.eql(null);
@@ -152,6 +160,7 @@ describe('test/card - A single playing card', function() {
   it("1.8. Bless", function() {
     let card = new Bless;
     expect(card.name).to.eql("Bless");
+    expect(card.cmp).to.eql(10);
     expect(card.shuffle).to.eql(false);
     expect(card.rolling).to.eql(false);
     expect(card.special).to.eql(null);
@@ -170,6 +179,7 @@ describe('test/card - A single playing card', function() {
   it("1.9. Curse", function() {
     let card = new Curse;
     expect(card.name).to.eql("Curse");
+    expect(card.cmp).to.eql(-10);
     expect(card.shuffle).to.eql(false);
     expect(card.rolling).to.eql(false);
     expect(card.special).to.eql(null);

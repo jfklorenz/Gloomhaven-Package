@@ -6,6 +6,7 @@ class Card {
     constructor() {
         this.name = "Modifier Card",
         this.modifier = null,
+        this.cmp = null
         this.shuffle = false,
         this.rolling = false,
         this.special = null,
@@ -19,6 +20,7 @@ class PlusTwo extends Card {
     constructor() {
         super(),
         this.name = "+2",
+        this.cmp = 2,
         this.modifier = (x => x + 2)
     }
 }
@@ -29,6 +31,7 @@ class PlusOne extends Card {
     constructor() {
         super(),
         this.name = "+1",
+        this.cmp = 1,
         this.modifier = (x => x + 1)
     }
 }
@@ -39,6 +42,7 @@ class PlusZero extends Card {
     constructor() {
         super(),
         this.name = "+0",
+        this.cmp = 0,
         this.modifier = (x => x + 0)
     }
 }
@@ -49,6 +53,7 @@ class MinusOne extends Card {
     constructor() {
         super(),
         this.name = "-1",
+        this.cmp = -1,
         this.modifier = (x => Math.max(x - 1, 0))
     }
 }
@@ -59,6 +64,7 @@ class MinusTwo extends Card {
     constructor() {
         super(),
         this.name = "-2",
+        this.cmp = -2,
         this.modifier = (x => Math.max(x - 2, 0))
     }
 }
@@ -69,6 +75,7 @@ class Double extends Card {
     constructor() {
         super(),
         this.name = "Double",
+        this.cmp = 10,
         this.modifier = (x => x * 2),
         this.shuffle = true
     }
@@ -80,6 +87,7 @@ class Empty extends Card {
     constructor() {
         super(),
         this.name = "Empty",
+        this.cmp = -10,
         this.modifier = (x => x * 0),
         this.shuffle = true
     }
@@ -91,6 +99,7 @@ class Bless extends Card {
     constructor() {
         super(),
         this.name = "Bless",
+        this.cmp = 10,
         this.modifier = (x => x * 2)
     }
 }
@@ -101,6 +110,7 @@ class Curse extends Card {
     constructor() {
         super(),
         this.name = "Curse",
+        this.cmp = -10,
         this.modifier = (x => x * 0)
     }
 }

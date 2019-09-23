@@ -25,8 +25,8 @@ The *__ tests __* folder contains the tests for the implemented features.
 - [x] 1.0. Attributes
 - [x] 1.1. addCard()
 - [x] 1.2. addCards()
-- [ ] 1.3. removeCard()
-- [ ] 1.4. removeCards()
-- [ ] 1.5. draw()
+- [x] 1.3. removeCard()
+- [x] 1.4. removeCards()
+- [x] 1.5. draw()
 - [ ] 1.6. advantage()
 - [ ] 1.7. disadvantage()
