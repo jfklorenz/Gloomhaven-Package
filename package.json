@@ -1,6 +1,6 @@
 {
   "name": "gloomhaven-modifier",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Gloomhaven Modifier Cards & Decks.",
   "main": "index.js",
   "repository": "https://github.com/jfklorenz/Gloomhaven-Modifier.git",
