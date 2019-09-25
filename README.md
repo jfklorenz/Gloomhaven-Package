@@ -16,7 +16,8 @@ The *features* folder contains the source code and pictures.
 - [x] Shuffle the deck
 - [x] Draw a card from a deck with a given value
 - [ ] Draw with advantage/disadvantage
-- 
+- [ ] Look at the top X cards
+- [ ] Look at the top X cards and put them back in any order
 
 ---
 
@@ -24,8 +25,8 @@ The *features* folder contains the source code and pictures.
 The *__ tests __* folder contains the tests for the implemented features.
 Every implemented feature was tested seperately as well as within joined cases.
 
-- [x] All cards with respective modifier
-- [x] All implemented deck methods
+- [x] All implemented cards
+- [x] All implemented decks and methods
 
 ---
 
@@ -36,7 +37,7 @@ Every implemented feature was tested seperately as well as within joined cases.
 const plusTwo = new PlusTwo
 
 // Apply card modifier to a value
-plusOne.modifier(3) == 5
+plusTwo.modifier(3) == 5
 
 // Create a deck
 var deck = new Deck
@@ -47,8 +48,12 @@ deck.addCard(plusTwo)
 // Draw a card with a value (i.e. 4)
 deck.draw(4)
 
+// Modifier after drawing
+deck.modifier == 4
+
 // Value after drawing
-deck.modifier == 6
+deck.value == 6
+
 // Special after drawing
 deck.special = []
 ```

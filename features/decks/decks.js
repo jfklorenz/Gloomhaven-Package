@@ -8,7 +8,6 @@ class Deck {
 
     // --------------------------------
     constructor() {
-
         // Name of the Deck
         this.name = "Modifier Deck",
 
@@ -19,7 +18,7 @@ class Deck {
         this.cards = [],
 
         // Discard Pile
-        this.discards = []
+        this.discards = [],
 
         // Modifier after drawing
         this.modifier = [],
@@ -31,7 +30,10 @@ class Deck {
         this.value = null,
 
         // Needs to be shuffled
-        this.shuffle = false
+        this.shuffle = false,
+
+        // Cards currently looked at
+        this.looking = []
     }
 
     // --------------------------------
@@ -50,7 +52,7 @@ class Deck {
         }
         this.shuffle = false;
         return;
-      }
+    }
 
     // --------------------------------
     // Add a Card
@@ -206,6 +208,37 @@ class Deck {
     }
 
     // --------------------------------
+    // Look at the top cards
+    look(top) {
+        let cards = [];
+        for (var i = this.cards.length; i >= this.cards.length - top; i++) {
+            cards.push(this.cards[i]);
+        }
+        return cards;
+    }
+
+    // --------------------------------
+    // Take the top cards to look at them
+    take(top) {
+        for (var i = 0; i < top; i++) {
+            this.looking.push(this.cards.pop());
+        }
+        return;
+    }
+
+    // Put the cards you are looking at back at given order
+    put(card) {
+        const len = this.looking.length;
+        var index = this.looking.indexOf(card);
+        if (index > -1) {
+            this.cards.splice(index, 1);
+        }
+        if (len > this.looking.length) {
+            this.cards.push(card);
+        }
+        return;
+
+    }
 }
 
 // ================================

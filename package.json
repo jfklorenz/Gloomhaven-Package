@@ -1,15 +1,17 @@
 {
-  "name": "gloomhaven-cards",
+  "name": "gloomhaven-modifier",
   "version": "0.0.1",
-  "description": "Package for missing Gloomhaven player and monster cards.",
+  "description": "Gloomhaven Modifier Cards & Decks.",
   "main": "index.js",
-  "repository": "https://github.com/jfklorenz/Gloomhaven-Cards.git",
+  "repository": "https://github.com/jfklorenz/Gloomhaven-Modifier.git",
   "author": "Julian Lorenz",
   "contributors": [],
   "keywords": [
     "gloomhaven",
     "gloomhaven cards",
     "gloomhaven decks",
+    "gloomhaven modifier",
+    "modifier deck",
     "boardgame"
   ],
   "license": "MIT",
