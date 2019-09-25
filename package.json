@@ -22,9 +22,5 @@
   },
   "scripts": {
     "test": "jest"
-  },
-  "dependencies": {
-    "test": "^0.6.0",
-    "yarn": "^1.17.3"
   }
 }
