@@ -17,4 +17,6 @@ This folder contains a template class for a basic card as well as every single m
 
 ---
 
-## Classes
+## Class Cards
+
+In progress...

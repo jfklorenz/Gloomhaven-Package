@@ -131,7 +131,9 @@ player.shuffle == []
 - [ ] 1.7. disadvantage()
 - [x] showPerk()
 - [x] applyPerk()
-- [x] 
+- [x] look()
+- [x] take()
+- [x] put()
 
 ---
 

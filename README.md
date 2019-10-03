@@ -15,14 +15,20 @@ This package includes a corresponding *.png* file for every single card.
 ## Features
 The *features* folder contains the source code and pictures.
 
-- [x] Create every modifier card
-- [x] Create every character deck
+#### Cards
+- [x] Create every base modifier card
+- [ ] Create every class modifier card
+
+#### Decks
+- [x] Create player and monster modifier decks
+- [ ] Create every class modifier deck
 - [x] Add or remove cards from the deck
 - [x] Shuffle the deck
 - [x] Draw a card from a deck with a given value
 - [ ] Draw with advantage/disadvantage
 - [ ] Look at the top X cards
 - [ ] Look at the top X cards and put them back in any order
+- [ ] Apply perks of a class
 
 ---
 

@@ -17,6 +17,9 @@ The *__ tests __* folder contains the tests for the implemented features.
 - [x] 1.8. Bless
 - [x] 1.9. Curse
 
+#### Class Cards
+In progress...
+
 ---
 
 ## Decks
@@ -30,3 +33,9 @@ The *__ tests __* folder contains the tests for the implemented features.
 - [x] 1.5. draw()
 - [ ] 1.6. advantage()
 - [ ] 1.7. disadvantage()
+- [ ] 1.8 look()
+- [ ] 1.9 take()
+- [ ] 1.10 put()
+
+#### Class Decks
+In progress...

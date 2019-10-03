@@ -1,5 +1,5 @@
 # Features
-The *features* folder contains the source code and pictures.
+The *features* folder contains the source code for all cards and decks.
 
 ---
 
@@ -10,8 +10,3 @@ The *cards* folder contains a template class for a basic card as well as every s
 
 ## Decks
 The *decks* folder contains a template class for a basic deck as well as a modifier deck for every class as *Javascript* code.
-
----
-
-## PNG
-The *png* folder contains a *.png* graphic for every modifier card within the game.
