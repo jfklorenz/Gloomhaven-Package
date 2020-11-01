@@ -2,7 +2,8 @@
 
 [![NPM](https://nodei.co/npm/gloomhaven-modifier.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/gloomhaven-modifier/)
 
-![GitHub top language](https://img.shields.io/github/languages/top/jfklorenz/gloomhaven-modifier) ![npm](https://img.shields.io/npm/v/gloomhaven-modifier) ![npm](https://img.shields.io/npm/dm/gloomhaven-modifier) ![NPM](https://img.shields.io/npm/l/gloomhaven-modifier)
+
+![Status](https://img.shields.io/badge/status-in%20progress-yellow) ![GitHub top language](https://img.shields.io/github/languages/top/jfklorenz/gloomhaven-modifier) ![npm](https://img.shields.io/npm/v/gloomhaven-modifier) ![npm](https://img.shields.io/npm/dm/gloomhaven-modifier) ![NPM](https://img.shields.io/npm/l/gloomhaven-modifier)
 
 This is a *Javascript* package for the *Attack-Modifier* of the boardgame *Gloomhaven*.
 
